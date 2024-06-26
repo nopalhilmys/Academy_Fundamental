@@ -1,0 +1,4 @@
+h1 {
+    /* fungsi important untuk membuat priority property dan tidak bisa di override */
+    color: white !important;
+}

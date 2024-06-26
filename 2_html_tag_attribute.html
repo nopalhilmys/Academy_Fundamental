@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 1. Contoh HTML Tag -->
+        <h1>Headings 1</h1>
+        <!-- Elemen ini membuat judul besar dengan teks "Headings 1". Biasanya digunakan untuk judul utama halaman web -->
+        <h3>Headings 2</h3>
+        <!-- Elemen ini membuat judul yang lebih kecil dengan teks "Headings 2". Biasanya digunakan untuk subjudul -->
+        <b>Bold</b>
+        <!-- Elemen ini membuat teks di dalamnya menjadi tebal (bold) -->
+        <i>Italic</i>
+        <!-- Elemen ini membuat teks di dalamnya menjadi miring (italic). -->
+        <u>Undeline</u>
+        <!-- Elemen ini menggaris bawahi teks di dalamnya. -->
+        <del>Deleted</del>
+        <!-- Elemen ini menandai teks di dalamnya sebagai terhapus. Biasanya digunakan untuk menunjukkan bahwa teks telah dihapus atau diedit. -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <br />
+            <!--Elemen ini memasukkan jeda baris di dalam paragraf. Biasanya digunakan untuk membuat baris baru tanpa memulai paragraf baru -->
+            Voluptatem harum qui ex labore eveniet tempora iste quos quia alias? Aliquam incidunt eveniet suscipit
+            <br />
+            accusamus obcaecati quo, fugiat mollitia ipsam placeat?
+        </p>
+        <!-- Elemen ini mendefinisikan paragraf teks. -->
+
+        <!-- Catatan lain :
+            Yang dinamakan "element" adalah dari 'start tag' {h1} sampai dengan 'end tag' {h1}. Catatan : 'NEVER SKIP END TAG'!
+            Sedangkan "tag" adalah h1, h2, p, br, dsb.
+            Kemudaian value yang ditulis diantara element disebut "content element".
+
+            Referensi : https://www.w3schools.com/TAGS/ref_byfunc.asp
+        -->
+
+        <!-- 2. Contoh HTML Attribute -->
+        <!-- Attribute :
+            Attribute fungsinya untuk menambahkan informasi tambahan pada element tersebut.
+            Attribute selalu ditulis di 'start tag' (awal tag).
+            Contoh-contoh attribute : href, src, alt, target, width, height. dsb.
+
+            Catatan : 
+            Semua elemen HTML dapat memiliki atribut, namun beberapa atribut hanya berlaku untuk tag tertentu. Contohnya, atribut "action" hanya untuk tag {<form>}
+                
+            Referensi : https://www.w3schools.com/TAGS/ref_attributes.asp
+        -->
+
+        <!-- Elemen ini mendefinisikan daftar tidak berurutan (unordered list). -->
+        <ul>
+            <!-- Elemen ini mendefinisikan item dalam daftar -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://www.trans7.co.id/" target="_blank">About</a></li>
+        </ul>
+
+        <!-- Elemen ini mendefinisikan daftar berurutan (ordered list). -->
+        <!-- Atribut "type" pada elemen <ol> menentukan tipe penanda yang digunakan untuk tiap item (biasanya angka atau huruf). -->
+        <ol type="1">
+            <!-- Elemen ini mendefinisikan item dalam daftar -->
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+
+        <!-- Elemen ini mendefinisikan formulir -->
+        <!-- Atribut "action" pada elemen {<form>} menentukan halaman yang akan memproses data yang dikirimkan. -->
+        <form action="#">
+            <!-- Elemen ini mendefinisikan label -->
+            <label for="name">Name</label>
+            <!-- Elemen ini digunakan untuk input data dari pengguna. -->
+            <!-- Atribut "type" pada elemen input adalah menentukan type dari input contoh: text untuk format text, email untuk format email dst. -->
+            <input type="text" name="name" id="name" />
+            <br />
+            <label for="email">Email</label>
+            <input type="email" name="name" id="email" />
+            <br />
+            <label for="comment">Comment</label>
+            <br />
+            <!-- Elemen ini digunakan untuk input teks multiline -->
+            <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+            <br />
+            <!-- Elemen ini digunakan untuk tombol submit yang mengirimkan data dari formulir -->
+            <input type="submit" value="Submit Form" />
+        </form>
+        <!-- 
+            Tips : 
+            Element {<label>} attribute for="name" berfungsi untuk menghubungkan label dengan elemen input. 
+            Ketika Anda klik label tersebut, kursor akan langsung berpindah ke elemen input yang memiliki id="name".
+
+            Referensi : https://www.w3schools.com/html/html_forms.asp 
+        -->
+    </body>
+</html>

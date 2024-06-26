@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- 1. Contoh penggunaan CSS INTERNAL -->
+        <style>
+            /* BODY adalah selector, background-color adalah property, dan red adalah value */
+            body {
+                background-color: red;
+                font-family: Georgia, serif; /* ubah font refernsi websfont safe (compatible) : https://www.w3schools.com/css/css_font_websafe.asp */
+            }
+
+            /* Contoh penerapan menggunakan selector ID dan Class */
+            /* Attribute ID = home adalah elemen yang ingin ditargetkan. */
+            #home {
+                border: solid blue 2px;
+                background-color: white;
+            }
+
+            /* Attribute CLASS = about adalah elemen yang ingin ditargetkan. */
+            .about {
+                border: solid greenyellow 2px;
+            }
+
+            /* Attribute CLASS = bg-white adalah elemen yang ingin ditargetkan. */
+            .bg-white {
+                background-color: white;
+            }
+
+            /* Jenis - jenis selector pada CSS ada banyak, referensi bisa cek disini : https://www.w3schools.com/css/css_selectors.asp */
+            /* ------------------------------------------------------- */
+        </style>
+
+        <!-- 2. Contoh penggunaan CSS EXTERNAL -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!--3. Contoh penggunaan CSS INLINE -->
+        <header style="background-color: #333">
+            <!-- Contoh penerapan CSS !important. 
+                Property "color" pada element <h1> tidak akan berfungi karena color <h1> sudah di deklarasikan di style.css dengan tanda !important,
+                artinya tidak bisa di overwrite.
+             -->
+            <h1 style="color: #333; font-size: 50px; font-style: italic; text-decoration: underline; font-weight: lighter">Headings 1</h1>
+            <!-- Referensi :
+                text decoration : https://www.w3schools.com/cssref/pr_text_text-decoration.php
+                font : https://www.w3schools.com/cssref/pr_font_font.php
+            -->
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.trans7.co.id/" target="_blank">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Contoh penggunaan CSS selector dengan attribute ID (value ID=HOME)-->
+            <section id="home">
+                <div class="container-home">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Voluptatem harum qui ex labore eveniet tempora iste quos quia alias? Aliquam incidunt eveniet suscipit<br />
+                        accusamus obcaecati quo, fugiat mollitia ipsam placeat?
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contoh penggunaan CSS selector dengan attribute CLASS (value CLASS / CLASSNAME=ABOUT)-->
+            <!-- 
+                Setelah attribute class ditambah value "bg-white" {<section>} menjadi 2 selector artinya style pada section akan terpengaruh dari 2 selector ini (kombinasi).
+                Jika dilihat dari deklarasi style di {<head>} (internal) deklarasi about = border green, dan bg-white = background white.
+                    Jadi section dibawah akan menjadi border hijau dengan background putih.
+
+                Jenis - jenis selector pada CSS ada banyak, referensi bisa cek disini : https://www.w3schools.com/css/css_selectors.asp
+            -->
+            <section class="about bg-white">
+                <div class="container-about">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni placeat accusamus perferendis iure soluta assumenda ipsam, dolorum reprehenderit eligendi voluptas eos possimus ipsum officia aspernatur vitae beatae natus esse dignissimos reiciendis odit harum, <br />
+                        officiis doloribus earum atque! Dicta eveniet quos, doloribus error, voluptates dolores pariatur voluptatem consequatur quidem ducimus maxime?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-form">
+                    <form action="#">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        <br />
+                        <label for="email">Email</label>
+                        <input type="email" name="name" id="email" />
+                        <br />
+                        <label for="comment">Comment</label>
+                        <br />
+                        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+                        <br />
+                        <input type="submit" value="Submit Form" />
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Simple Website</p>
+        </footer>
+    </body>
+</html>

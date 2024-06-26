@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #f0f0f0;
+                font-family: Georgia, serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+            }
+
+            #home {
+                background-color: white;
+            }
+
+            section#about .container-about {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 20px;
+            }
+
+            section#about .container-about .about-desc {
+                align-self: start;
+            }
+
+            .bg-white {
+                background-color: white;
+            }
+
+            section#project .container-project {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto 300px;
+                align-items: start;
+                gap: 20px;
+            }
+
+            section#project .container-project figure {
+                margin: 0 !important;
+                background-color: white;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+
+            section#project .container-project figure img {
+                width: 100%;
+                height: auto;
+            }
+
+            header {
+                text-align: center;
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            span {
+                display: block;
+                /*display: none;*/
+            }
+
+            nav {
+                width: 100%;
+                background-color: #555;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul li {
+                /* display: inline; */
+                list-style: none;
+                padding: 10px 0px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+
+            nav ul li a:hover {
+                background: #f0f0f0;
+                color: black;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0px;
+                row-gap: 20px;
+                width: 70%;
+            }
+
+            footer {
+                background-color: #333;
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+
+            @media screen and (max-width: 992px) {
+                section#project .container-project {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto auto;
+                }
+
+                main {
+                    width: 80%;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                section#about .container-about {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+
+                section#about .container-about img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                section#project .container-project {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 10px;
+                }
+
+                main {
+                    width: 90%;
+                }
+
+                nav ul li a {
+                    padding: 10px 10px;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/form.css" />
+        <link rel="stylesheet" href="css/modal.css" />
+    </head>
+    <body>
+        <header style="background-color: #333">
+            <h1 style="color: #333; font-size: 50px; font-style: italic; text-decoration: underline; font-weight: lighter">My Portfolio</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#project">My Project</a></li>
+                <li><a href="#form">Form Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <h2>Home</h2>
+                <div class="container-home">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Voluptatem harum qui ex labore eveniet tempora iste quos quia alias? Aliquam incidunt eveniet suscipit<br />
+                        accusamus obcaecati quo, fugiat mollitia ipsam placeat?
+                    </p>
+                </div>
+            </section>
+
+            <section id="about" class="about bg-white">
+                <h2>About</h2>
+                <div class="container-about">
+                    <img src="https://picsum.photos/300" alt="Photo Profile" />
+                    <p class="about-desc">
+                        Lorem ipsum, <span style="text-decoration: line-through">dolor sit amet consectetur</span>voluptatem consequatur. <span style="text-decoration: underline">adipisicing elit. Magni placeat accusamus</span> perferendis iure soluta assumenda ipsam, dolorum reprehenderit eligendi voluptas eos possimus ipsum officia aspernatur vitae beatae natus esse dignissimos reiciendis odit harum, <br />
+                        officiis doloribus earum atque! Dicta eveniet quos, doloribus error, voluptates dolores pariatur voluptatem consequatur quidem ducimus maxime?
+                    </p>
+                </div>
+            </section>
+
+            <section id="project">
+                <h2>Project</h2>
+                <div class="container-project">
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=1" alt="Project Image 1" />
+                        <figcaption>Project Image 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=2" alt="Project Image 2" />
+                        <figcaption>Project Image 2</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=3" alt="Project Image 3" />
+                        <figcaption>Project Image 3</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=4" alt="Project Image 4" />
+                        <figcaption>Project Image 4</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=5" alt="Project Image 5" />
+                        <figcaption>Project Image 5</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=6" alt="Project Image 6" />
+                        <figcaption>Project Image 6</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="form">
+                <h2>Form Contact</h2>
+                <div class="container-form">
+                    <form action="#">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        <br />
+                        <label for="email">Email</label>
+                        <input type="email" name="name" id="email" />
+                        <br />
+                        <label for="comment">Comment</label>
+                        <br />
+                        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+                        <br />
+                        <input type="submit" value="Submit Form" />
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Simple Website</p>
+        </footer>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+                <h2>Modal</h2>
+                <p style="text-align: center"><img src="#" id="modal-image" alt="#" /></p>
+                <h3 id="modal-title" style="text-align: center"></h3>
+            </div>
+        </div>
+        <!-- End The Modal -->
+        <script>
+            /* 1. Contoh DOM untuk selecting element html by ID */
+            /* Fungsi script diatas adalah untuk menampung DOM Element yang sudah di select ke dalam variable, nanti akan digunakan untuk interaksi mengguanakan property tertentu */
+            const modal = document.getElementById("myModal");
+            const modalTitle = document.getElementById("modal-title");
+            const modalImg = document.getElementById("modal-image");
+            const closeBtn = document.getElementById("close");
+            /* Refernsi DOM method : https://www.w3schools.com/jsref/met_document_getelementbyid.asp */
+            /* Refernsi : https://www.w3schools.com/js/js_htmldom_document.asp */
+            /* -----------------------------------------------------------*/
+
+            /* 2. Contoh DOM untuk selecting element html by Query Selector */
+            /* Selecting dibawah menggunakan "querySelectorAll" (match specific selector) artinya harus menemukan element dengan tag <figure> */
+            const figures = document.querySelectorAll("figure");
+            /* Refernsi : https://www.w3schools.com/jsref/met_document_queryselectorall.asp */
+            /* -----------------------------------------------------------*/
+
+            /* 3. Contoh ForEach / Loop dengan javascript */
+            /* Karena node list element (figures) yang dihasilkan lebih dari satu, maka perlu dilakukan perulangan untuk selecting satu per satu element. */
+            figures.forEach((figure) => {
+                /* 4. Contoh menambahkan "Event Click" pada setiap element tag figure */
+                /* Event adalah interaksi antara user dengan halaman website / html element. Jadi fungsi script dibawah untuk memberikan aksi click pada setiap element figure */
+                // figure.addEventListener("click", () => {
+                //     const figcaption = figure.querySelector("figcaption");
+                //     const img = figure.querySelector("img");
+
+                //     modal.style.display = "block";
+                // });
+                /* referensi : https://www.w3schools.com/jsref/met_document_addeventlistener.asp */
+                /* -----------------------------------------------------------*/
+
+                /* 4. Idem, Contoh menambahkan event click pada setiap element tag figure. */
+                /* Perbedaanya adalah property onclick tidak bisa diduplicate jika kita buat lagi dengan selector sama otomatis yang sebelumnya akan di overwrite. */
+                figure.onclick = () => {
+                    /* 5. Contoh selecting element by match specific selector. Perbedaan dengan querySelectorAll adalah node querySelector yang dihasilkan hanya satu (first match). */
+                    const figcaption = figure.querySelector("figcaption");
+                    const img = figure.querySelector("img");
+                    /* referensi : https://www.w3schools.com/jsref/met_element_queryselector.asp */
+                    /* -----------------------------------------------------------*/
+
+                    /* 6. Contoh property innerText untuk set text element.*/
+                    /* Fungsi script dibawah : "content text" <modal-title> (element h3) di isi dengan "content text" dari figcaption. Referensi : https://www.w3schools.com/jsref/prop_html_innerhtml.asp */
+                    modalTitle.innerText = figcaption.textContent; /* Fungsi script disamping (Property "textContent") untuk mengambil text content dari element figcaption. Referensi : https://www.w3schools.com/jsref/prop_node_textcontent.asp */
+
+                    /* 7. Contoh property "src" untuk set dan return (get) src value. */
+                    /* Fungsi script dibawah adalah set "modalImg.src" value dengan "attribute src " dari element img. Referensi : https://www.w3schools.com/jsref/prop_img_src.asp */
+                    modalImg.src = img.src;
+
+                    /* 8. Contoh property "alt" untuk set dan return (get) alt value */
+                    /* Fungsi script dibawh adalah set "modalImg.alt" value dengan "attribute alt" dari element img. Referensi : https://www.w3schools.com/jsref/prop_img_alt.asp */
+                    modalImg.alt = figcaption.textContent;
+
+                    /* 9. Contoh mengubah property display */
+                    /* Script dibawah digunakan untuk mengubah / memberikan style type display pada sebuah element. Referensi https://www.w3schools.com/jsref/prop_style_display.asp */
+                    modal.style.display = "block";
+                };
+                /* Referensi : https://www.w3schools.com/jsref/event_onclick.asp*/
+                /* -----------------------------------------------------------*/
+            });
+            /* Refernsi : https://www.w3schools.com/jsref/jsref_foreach.asp */
+            /* -----------------------------------------------------------*/
+
+            /* 10. Contoh ,enambahkan event click pada element html.*/
+            /* Fungsi script dibawah adalah jika element tersebut di click akan menjalankan display="none".*/
+            closeBtn.onclick = function () {
+                /* property display digunakan untuk mengubah / memberikan style type display pada sebuah element. Referensi https://www.w3schools.com/jsref/prop_style_display.asp */
+                modal.style.display = "none";
+            };
+            /* Referensi : https://www.w3schools.com/jsref/event_onclick.asp*/
+            /* -----------------------------------------------------------*/
+        </script>
+    </body>
+</html>

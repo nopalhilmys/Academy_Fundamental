@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* Contoh penerapan "CSS box model" pada selector element body */
+            body {
+                background-color: red;
+                font-family: Georgia, serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            #home {
+                border: solid blue 2px;
+                background-color: white;
+            }
+
+            .about {
+                border: solid greenyellow 2px;
+            }
+
+            .bg-white {
+                background-color: white;
+            }
+
+            /* Contoh penerapan "CSS box model" pada selector element header */
+            header {
+                text-align: center; /*set style alignment ke center */
+                width: 100%; /*set content header dengan lebar ke 100% */
+
+                /* Contoh - contoh penulisan padding pada CSS */
+                /* padding: 20px; set "all" (top, right, bottom, left) ber-padding 20px */
+                padding: 20px 0; /* set "top-bottom" ber-padding 20px dan "right-left" ber-padding 0px;*/
+                /* padding: 20px 50px 10px; set "top" ber-padding 20px, "right-left" 50px, dan "bottom" 10px; */
+                /* padding: 20px 50px 10px 50px; set "top" ber-padding 20px, "right" 50px, "bottom" 10px;, dan "left" 50px */
+            }
+            /* Refernsi : https://www.w3schools.com/css/css_boxmodel.asp */
+            /*----------------------------------------------*/
+        </style>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header style="background-color: #333">
+            <h1 style="color: #333; font-size: 50px; font-style: italic; text-decoration: underline; font-weight: lighter">Headings 1</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.trans7.co.id/" target="_blank">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <div class="container-home">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Voluptatem harum qui ex labore eveniet tempora iste quos quia alias? Aliquam incidunt eveniet suscipit<br />
+                        accusamus obcaecati quo, fugiat mollitia ipsam placeat?
+                    </p>
+                </div>
+            </section>
+            <section class="about bg-white">
+                <div class="container-about">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni placeat accusamus perferendis iure soluta assumenda ipsam, dolorum reprehenderit eligendi voluptas eos possimus ipsum officia aspernatur vitae beatae natus esse dignissimos reiciendis odit harum, <br />
+                        officiis doloribus earum atque! Dicta eveniet quos, doloribus error, voluptates dolores pariatur voluptatem consequatur quidem ducimus maxime?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-form">
+                    <form action="#">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        <br />
+                        <label for="email">Email</label>
+                        <input type="email" name="name" id="email" />
+                        <br />
+                        <label for="comment">Comment</label>
+                        <br />
+                        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+                        <br />
+                        <input type="submit" value="Submit Form" />
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Simple Website</p>
+        </footer>
+    </body>
+</html>

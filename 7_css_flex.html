@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 2. Contoh penggunaan CSS Flexbox. Akan diimplementasikan pada element body */
+            /* Tujuan dari implementasi Flexbox ini untuk merapikan / mengatur layout style pada item-item (element) di dalam body. */
+            body {
+                display: flex; /* Mengubah display elemen <body> menjadi "flex". Artinya, elemen <body> akan menjadi flex-container, dan semua elemen di dalamnya akan menjadi flex-item. */
+                flex-direction: column; /* Menentukan arah flex item (child) dalam elemen <body> menjadi "column". Artinya, flex item akan ditata secara vertikal (cross axis) satu di atas yang lain (seperti block). */
+                align-items: center; /* Mendistribusikan semua flex items di tengah. Artinya, semua elemen di dalam <body> akan disejajarkan secara horisontal di tengah flex-container */
+                background-color: red;
+                font-family: Georgia, serif;
+                margin: 0;
+                padding: 0;
+            }
+            /* Referensi : https://www.w3schools.com/css/css3_flexbox.asp */
+            /* --------------------------------------------------------------------- */
+
+            #home {
+                border: solid blue 2px;
+                background-color: white;
+            }
+
+            .about {
+                border: solid greenyellow 2px;
+            }
+
+            .bg-white {
+                background-color: white;
+            }
+
+            header {
+                text-align: center;
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            span {
+                display: block;
+                /*display: none;*/
+            }
+
+            /* 1 Contoh penggunaan CSS Flexbox. Akan diimplementasikan pada element <nav> */
+            /* Tujuan dari implementasi Flexbox ini untuk mengubah style element <nav> sepertu menu website pada umumnya. */
+            nav {
+                width: 100%;
+                background-color: #555;
+            }
+
+            nav ul {
+                display: flex; /* Mengubah display elemen "<ul>" menjadi "flex". Ini memungkinkan kita untuk mengatur layout elemen-elemen di dalamnya secara lebih fleksibel. Element "<ul>" sudah menjadi flex-container dan "<li>"" adalah flex-item.*/
+                flex-direction: row; /* Menentukan arah layout elemen-elemen di dalam "<ul>" menjadi berbaris (row) / (main axis). Ini membuat item-item child akan tampil berdampingan secara horizontal. */
+                justify-content: center; /* Mendistribusikan elemen-elemen di dalam "<ul>" secara horizontal dengan posisi rata tengah (main axis) */
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul li {
+                /* display: inline; */ /*disable "display:inline" karena parentnya "<li>" yaitu "<ul>" sudah disetting flexbox, dan otomatis akan berbentuk horizontal (seperti inline) karena flexbox direction sudah disetting row*/
+                list-style: none; /* Menghilangkan bullet point (titik) default */
+                padding: 10px 0px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none; /* Menghilangkan garis bawah default pada element "<a>" */
+                padding: 10px 20px;
+            }
+
+            nav ul li a:hover {
+                background: #f0f0f0;
+                color: black;
+            }
+            /* Referensi : https://www.w3schools.com/css/css3_flexbox.asp */
+            /* --------------------------------------------------------------------- */
+
+            /* 3. Contoh penggunaan CSS Flexbox. Akan diimplementasikan pada element main */
+            /* Tujuan dari implementasi Flexbox ini untuk merapikan / mengatur layout style pada item-item (element) di dalam main. */
+            main {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0px; /* Memberikan jarak <main> "top-bottom"  daro element lain. */
+                row-gap: 20px; /* Menambahkan celah (gap) 20px antara flex item di dalam elemen <main>. Referensi gap : https://www.w3schools.com/cssref/css3_pr_gap.php. */
+                width: 70%; /* Mengatur lebar elemen <main> menjadi 70% dari lebar parent containernya*/
+            }
+            /* Referensi : https://www.w3schools.com/css/css3_flexbox.asp */
+            /* --------------------------------------------------------------------- */
+        </style>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header style="background-color: #333">
+            <h1 style="color: #333; font-size: 50px; font-style: italic; text-decoration: underline; font-weight: lighter">Headings 1</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.trans7.co.id/" target="_blank">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <div class="container-home">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Voluptatem harum qui ex labore eveniet tempora iste quos quia alias? Aliquam incidunt eveniet suscipit<br />
+                        accusamus obcaecati quo, fugiat mollitia ipsam placeat?
+                    </p>
+                </div>
+            </section>
+
+            <section class="about bg-white">
+                <div class="container-about">
+                    <p>
+                        Lorem ipsum, <span style="text-decoration: line-through">dolor sit amet consectetur</span>voluptatem consequatur. <span style="text-decoration: underline">adipisicing elit. Magni placeat accusamus</span> perferendis iure soluta assumenda ipsam, dolorum reprehenderit eligendi voluptas eos possimus ipsum officia aspernatur vitae beatae natus esse dignissimos reiciendis odit harum, <br />
+                        officiis doloribus earum atque! Dicta eveniet quos, doloribus error, voluptates dolores pariatur voluptatem consequatur quidem ducimus maxime?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-form">
+                    <form action="#">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        <br />
+                        <label for="email">Email</label>
+                        <input type="email" name="name" id="email" />
+                        <br />
+                        <label for="comment">Comment</label>
+                        <br />
+                        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+                        <br />
+                        <input type="submit" value="Submit Form" />
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Simple Website</p>
+        </footer>
+    </body>
+</html>

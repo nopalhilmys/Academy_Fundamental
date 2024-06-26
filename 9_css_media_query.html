@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: red;
+                font-family: Georgia, serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            #home {
+                border: solid blue 2px;
+                background-color: white;
+            }
+
+            section#about .container-about {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 20px;
+                border: solid greenyellow 2px;
+            }
+
+            section#about .container-about .about-desc {
+                align-self: start;
+            }
+
+            .bg-white {
+                background-color: white;
+            }
+
+            section#project .container-project {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto 300px;
+                align-items: start;
+                gap: 20px;
+            }
+
+            section#project .container-project figure {
+                margin: 0 !important;
+                background-color: white;
+                text-align: center;
+            }
+
+            section#project .container-project figure img {
+                width: 100%;
+                height: auto;
+            }
+
+            header {
+                text-align: center;
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            span {
+                display: block;
+                /*display: none;*/
+            }
+
+            nav {
+                width: 100%;
+                background-color: #555;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul li {
+                /* display: inline; */
+                list-style: none;
+                padding: 10px 0px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+
+            nav ul li a:hover {
+                background: #f0f0f0;
+                color: black;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0px;
+                row-gap: 20px;
+                width: 70%;
+            }
+
+            footer {
+                background-color: #333;
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+
+            /* Contoh penggunaan CSS Media Query */
+            /* referensi : https://www.w3schools.com/css/css3_mediaqueries.asp, https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
+
+            /* Biasanya untuk ukuran tablet*/
+            @media screen and (max-width: 992px) {
+                section#project .container-project {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto auto;
+                }
+
+                main {
+                    width: 80%;
+                }
+            }
+
+            /* Biasanya untuk ukuran smartphone*/
+            @media screen and (max-width: 600px) {
+                section#about .container-about {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+
+                section#about .container-about img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                section#project .container-project {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    gap: 10px;
+                }
+
+                main {
+                    width: 90%;
+                }
+            }
+        </style>
+
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/form.css" />
+    </head>
+    <body>
+        <header style="background-color: #333">
+            <h1 style="color: #333; font-size: 50px; font-style: italic; text-decoration: underline; font-weight: lighter">Headings 1</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.trans7.co.id/" target="_blank">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <div class="container-home">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Voluptatem harum qui ex labore eveniet tempora iste quos quia alias? Aliquam incidunt eveniet suscipit<br />
+                        accusamus obcaecati quo, fugiat mollitia ipsam placeat?
+                    </p>
+                </div>
+            </section>
+
+            <section id="about" class="about bg-white">
+                <div class="container-about">
+                    <img src="https://picsum.photos/300" alt="Photo Profile" />
+                    <p class="about-desc">
+                        Lorem ipsum, <span style="text-decoration: line-through">dolor sit amet consectetur</span>voluptatem consequatur. <span style="text-decoration: underline">adipisicing elit. Magni placeat accusamus</span> perferendis iure soluta assumenda ipsam, dolorum reprehenderit eligendi voluptas eos possimus ipsum officia aspernatur vitae beatae natus esse dignissimos reiciendis odit harum, <br />
+                        officiis doloribus earum atque! Dicta eveniet quos, doloribus error, voluptates dolores pariatur voluptatem consequatur quidem ducimus maxime?
+                    </p>
+                </div>
+            </section>
+
+            <section id="project">
+                <div class="container-project">
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=1" alt="Project Image 1" />
+                        <figcaption>Project Image 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=2" alt="Project Image 2" />
+                        <figcaption>Project Image 2</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=3" alt="Project Image 3" />
+                        <figcaption>Project Image 3</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=4" alt="Project Image 4" />
+                        <figcaption>Project Image 4</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=5" alt="Project Image 5" />
+                        <figcaption>Project Image 5</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://picsum.photos/250/200?random=6" alt="Project Image 6" />
+                        <figcaption>Project Image 6</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="form">
+                <div class="container-form">
+                    <form action="#">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        <br />
+                        <label for="email">Email</label>
+                        <input type="email" name="name" id="email" />
+                        <br />
+                        <label for="comment">Comment</label>
+                        <br />
+                        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+                        <br />
+                        <input type="submit" value="Submit Form" />
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Simple Website</p>
+        </footer>
+    </body>
+</html>
