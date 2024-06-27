@@ -21,7 +21,7 @@
 -   Basic Javascript
 -   JS HTML Document Object Model (Select element, Modifying, Event Listener)
 
-## FREE COURSE
+## UPSKILL W FREE COURSE
 
 -   https://www.codecademy.com/
 -   https://www.classcentral.com/
